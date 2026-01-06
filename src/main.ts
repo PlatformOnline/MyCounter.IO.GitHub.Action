@@ -1,5 +1,13 @@
 import * as core from '@actions/core'
 
+class ApiResponse {
+  status?: boolean
+  messages?: string[]
+  data?: {
+    value: number
+  }
+}
+
 export async function run(): Promise<void> {
   try {
     const apikey = core.getInput('apikey', {
@@ -86,9 +94,9 @@ export async function run(): Promise<void> {
       return
     }
 
-    const data: any = await response.json()
+    const data = (await response.json()) as ApiResponse
     if (!data.status) {
-      core.setFailed(`${data.messages.join(', ')}`)
+      core.setFailed(`${data.messages?.join(', ')}`)
       core.setOutput('status', false)
       return
     }

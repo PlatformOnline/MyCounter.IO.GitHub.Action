@@ -27,7 +27,7 @@ inputs:
     description: 'Value to set when action is set'
     required: false
     default: '1'
-  
+
 outputs:
   status:
     description: The status of the action performed
