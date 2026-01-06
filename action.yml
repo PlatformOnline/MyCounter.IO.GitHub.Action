@@ -1,23 +1,40 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: MyCounter.IO Action
+description: Read counter value from MyCounter.IO service and set it as output.
+author: Platform Online LLC
 
-# Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
-  icon: heart
-  color: red
+  icon: hash
+  color: gray-dark
 
-# Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  apikey:
+    description: 'API Key for MyCounter.IO service'
     required: true
-    default: '1000'
-
-# Define your outputs here.
+    default: ''
+  workspace:
+    description: 'Workspace alias name in MyCounter.IO'
+    required: true
+    default: ''
+  counter:
+    description: 'Counter alias name in MyCounter.IO'
+    required: true
+    default: ''
+  action:
+    description: 'Action to perform: get, increment, decrement'
+    required: true
+    default: ''
+  value:
+    description: 'Value to set when action is set'
+    required: false
+    default: '1'
+  
 outputs:
-  time:
-    description: Your output description here
+  status:
+    description: The status of the action performed
+  action:
+    description: The action performed
+  value:
+    description: The counter value after performing the action
 
 runs:
   using: node24
