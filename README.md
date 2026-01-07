@@ -19,8 +19,8 @@ workspace directly in your GitHub workflows.
 Before using this action, you need:
 
 1. A MyCounter.IO account with an active workspace
-2. An API key from MyCounter.IO
-3. At least one counter created in your workspace
+1. An API key from MyCounter.IO
+1. At least one counter created in your workspace
 
 ## Inputs
 
@@ -154,9 +154,9 @@ Never commit API keys directly in your workflow files.
 To add a secret:
 
 1. Go to your repository settings
-2. Navigate to "Secrets and variables" → "Actions"
-3. Click "New repository secret"
-4. Add your `MYCOUNTER_API_KEY`
+1. Navigate to "Secrets and variables" → "Actions"
+1. Click "New repository secret"
+1. Add your `MYCOUNTER_API_KEY`
 
 ## Error Handling
 
@@ -173,7 +173,7 @@ Check the action logs for detailed error messages.
 
 This action interacts with the MyCounter.IO API at:
 
-```
+```text
 https://api.mycounter.io/{workspace}/counter/{counter}
 ```
 
@@ -215,5 +215,5 @@ For issues related to:
 
 ## Links
 
-- [MyCounter.IO Website](https://mycounter.io)
+- [MyCounter.IO Site](https://mycounter.io)
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
